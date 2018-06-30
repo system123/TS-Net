@@ -117,9 +117,9 @@ class ListDataset(Abstract_dataset):
         self.test_images = image_files[test_indx]
         self.valid_images = image_files[validation_indx]
         
-        mean_std_train = self.process_patches(self.train_images, 'train', self.category)
-        mean_std_test = self.process_patches(self.test_images, 'test', self.category)
-        mean_std_valid = self.process_patches(self.valid_images, 'validation', self.category)
+        mean_std_train = self.process_patches(self.train_images, 'train')
+        mean_std_test = self.process_patches(self.test_images, 'test')
+        mean_std_valid = self.process_patches(self.valid_images, 'validation')
 
         mean_std = (mean_std_train + mean_std_test + mean_std_valid)/3
         
